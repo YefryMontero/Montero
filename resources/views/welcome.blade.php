@@ -81,17 +81,17 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                   Montero
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
+                    <a href="https://laravel.com/docs">Compras</a>
+                    <a href="https://laracasts.com">Ventas</a>
+                    <a href="https://laravel-news.com">Lista de Precios</a>
+                    <a href="https://blog.laravel.com">Pedidos</a>
+                    <a href="https://nova.laravel.com">Pagos</a>
+                    <a href="https://forge.laravel.com">Averias</a>
+                    <a href="https://vapor.laravel.com">Envios</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
             </div>
