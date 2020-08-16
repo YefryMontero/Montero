@@ -17,6 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Route::get('inventario', 'InventarioController@index')->name('inventario');
+Route::get('inventario/create_producto', 'InventarioController@create' )->name('create_producto_inventario');
+Route::post('inventario', 'InventarioController@store' )->name('store_producto_inventario');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('pedidos', 'PedidoController@index')->name('pedidos');
+Route::get('pedidos/crear' , 'PedidoController@create')->name('crear_pedido');

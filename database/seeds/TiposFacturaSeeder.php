@@ -21,7 +21,7 @@ class TiposFacturaSeeder extends Seeder
 
           foreach($tiposFactura as $key => $value){
             DB::table('tipos_factura')->insert([
-                'nombre' => $value;
+                'nombre' => $value
             ]);
         }
 

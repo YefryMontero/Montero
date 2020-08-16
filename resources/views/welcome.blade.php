@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Montero</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -12,10 +12,10 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
+                background-color: #04323F;
+                color: #D45812;
                 font-family: 'Nunito', sans-serif;
-                font-weight: 200;
+                font-weight: 500;
                 height: 100vh;
                 margin: 0;
             }
@@ -45,13 +45,13 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 130px;
             }
 
             .links > a {
-                color: #636b6f;
+                color: #fff;
                 padding: 0 25px;
-                font-size: 13px;
+                font-size: 15px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
@@ -88,11 +88,11 @@
                     <a href="https://laravel.com/docs">Compras</a>
                     <a href="https://laracasts.com">Ventas</a>
                     <a href="https://laravel-news.com">Lista de Precios</a>
-                    <a href="https://blog.laravel.com">Pedidos</a>
+                    <a href="{{route('pedidos')}}">Pedidos</a>
                     <a href="https://nova.laravel.com">Pagos</a>
                     <a href="https://forge.laravel.com">Averias</a>
                     <a href="https://vapor.laravel.com">Envios</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="{{route('inventario')}}">Inventario</a>
                 </div>
             </div>
         </div>

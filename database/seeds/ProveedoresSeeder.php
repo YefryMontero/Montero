@@ -11,7 +11,9 @@ class ProveedoresSeeder extends Seeder
      */
     public function run()
     {
-          DB::table('proveedores')->insert([
+
+
+        DB::table('proveedores')->insert([
      	'nombre' => 'Marino Gomez',
         'razon_social'=> 'Regimen comun',
         'rut' => '6423266',

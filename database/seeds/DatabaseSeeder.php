@@ -13,21 +13,35 @@ class DatabaseSeeder extends Seeder
     {
 
            $this->truncateTablas([
-            'usuario',
+            'usuarios',
             'permisos',
             'roles',
-            'usuario_rol',
+            'tipos_factura',
+            'tipos_pago',
+            'tipos_pedido',
+            'usuarios_rol',
             'productos',
             'clientes',
-            'proveedores'
+            'proveedores',
+            'categorias',
+            'pesos',
+            'unidades_medida',
+            'inventario'
         ]);
 
         $this->call(user_seeder::class);
         $this->call(RolSeeder::class);
         $this->call(PermisoSeeder::class);
+        $this->call(TiposFacturaSeeder::class);
+        $this->call(TiposPagoSeeder::class);
+        $this->call(TiposPedidoSeeder::class);
         $this->call(ClientesSeeder::class);
         $this->call(ProveedoresSeeder::class);
-        $this->call(ProductoSeeder::class);
+        $this->call(ProductosSeeder::class);
+        $this->call(CategoriasSeeder::class);
+        $this->call(UnidadesMedidaSeeder::class);
+        $this->call(PesosSeeder::class);
+        $this->call(InventarioSeeder::class);
     }
 
      protected function truncateTablas(array $tablas)

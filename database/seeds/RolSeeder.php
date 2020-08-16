@@ -23,30 +23,34 @@ class RolSeeder extends Seeder
             ]);
         }
 
-         DB::table('usuario_rol')->insert([
+         DB::table('usuarios_rol')->insert([
             'rol_id' => 1,
             'usuario_id' => 1
         ]);
-        DB::table('usuario_rol')->insert([
+        DB::table('usuarios_rol')->insert([
              'rol_id' => 1,
             'usuario_id' => 2
         ]);
-        DB::table('usuario_rol')->insert([
+      /*  DB::table('usuarios_rol')->insert([
             'rol_id' => 6,
             'usuario_id' => 3
         ]);
-        DB::table('usuario_rol')->insert([
+        DB::table('usuarios_rol')->insert([
             'rol_id' => 6,
             'usuario_id' => 4
          ]);
-        DB::table('usuario_rol')->insert([
+        DB::table('usuarios_rol')->insert([
             'rol_id' => 5,
             'usuario_id' => 5
         ]);
-       DB::table('usuario_rol')->insert([
+       DB::table('usuarios_rol')->insert([
             'rol_id' => 5,
             'usuario_id' => 6
         ]);
-
+        DB::table('usuarios_rol')->insert([
+            'rol_id' => 3,
+            'usuario_id' => 7
+        ]);
+*/
     }
 }

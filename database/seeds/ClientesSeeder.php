@@ -11,7 +11,7 @@ class ClientesSeeder extends Seeder
      */
     public function run()
     {
-     
+
      DB::table('clientes')->insert([
      	'nombre' => 'Mercamio',
         'apellido'=> 'No Aplica',
@@ -19,7 +19,8 @@ class ClientesSeeder extends Seeder
         'email' => 'Mercamio@montero.com',
         'direccion' => 'calle 15',
         'telefono' => '124124',
-        'plazo_factura' => 60]);
+        'plazo_factura' => 60
+    ]);
 
      DB::table('clientes')->insert([
      	'nombre' => 'Jorge',
@@ -28,7 +29,8 @@ class ClientesSeeder extends Seeder
         'email' => 'Jorge@montero.com',
         'direccion' => 'calle 18', 
         'telefono' => '1231',
-        'plazo_factura' => 60]);
+        'plazo_factura' => 60
+    ]);
 
     }
 }
