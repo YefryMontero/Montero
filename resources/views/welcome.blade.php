@@ -87,7 +87,7 @@
                 <div class="links">
                     <a href="https://laravel.com/docs">Compras</a>
                     <a href="https://laracasts.com">Ventas</a>
-                    <a href="https://laravel-news.com">Lista de Precios</a>
+                    <a href="https://laravel-snews.com">Lista de Precios</a>
                     <a href="{{route('pedidos')}}">Pedidos</a>
                     <a href="https://nova.laravel.com">Pagos</a>
                     <a href="https://forge.laravel.com">Averias</a>

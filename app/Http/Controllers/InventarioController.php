@@ -9,6 +9,11 @@ use App\Models\Productos\Categoria;
 use App\Models\Productos\UnidadMedida;
 use App\Models\Productos\Peso;
 
+
+//***Autor:***Yefry Montero**//
+//***Created_At:***01/01/2020***//
+//***Update_At:***29/03/2020***//
+
 class InventarioController extends Controller
 {
     /**

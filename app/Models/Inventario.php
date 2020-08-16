@@ -10,6 +10,7 @@ use App\Models\Productos\Peso;
 
 class Inventario extends Model
 {
+    
     protected $table = 'inventario';
     protected $fillable = ['producto_id','categoria_id','pesos_id','unidad_medida_id','cantidad','descripcion'];
 
