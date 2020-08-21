@@ -26,6 +26,7 @@ Pedidos
                             <th>Realizado Por</th>
                             <th>Tipo</th>
                             <th>Nombre</th>
+                            <th>Direccion</th>
                             <th>Estado</th>
                             <th>Accion</th>
                             <th class="width70"></th>

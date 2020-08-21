@@ -2,18 +2,14 @@
 
 namespace App\Http\Controllers\Seguridad;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-
-//***Autor:***Yefry Montero**//
-//***Created_At:***01/01/2020***//
-//***Update_At:***29/03/2020***//
 
 class LoginController extends Controller
 {
     use AuthenticatesUsers;
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = "inventario";
     private $maxAttempts = 3;
     private $decayMinutes = 20;
 
@@ -24,7 +20,7 @@ class LoginController extends Controller
 
     public function index()
     {
-        return view('home');
+        return view('seguridad.index');
     }
 
     protected function authenticated(Request $request, $user)

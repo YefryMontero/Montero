@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Pedidos\TipoPedido;
+use App\Models\Admin\Cliente;
+use App\Models\Admin\Proveedor;
 
 class PedidoController extends Controller
 {
@@ -26,7 +29,15 @@ class PedidoController extends Controller
     public function create()
     {
         //
-        return view('pedido.crear');
+          $datosInventario = Inventario::with(
+            'productos:productos.id,nombre as nombreProducto', 
+            'categorias:categorias.id,nombre as nombreCategoria',
+            'pesos:pesos.id,cantidad' ,
+            'unidadesMedida:unidades_medida.id,nombre as nombreUnidadMedida')->orderBy('id')->get();
+        $clientes = Cliente::orderBy('id')->get();
+        $proveedores = Proveedor::orderBy('id')->get();
+        $tiposPedido = TipoPedido::orderBy('id')->get();
+        return view('pedido.crear', compact('tiposPedido','clientes','proveedores','datosInventario'));
     }
 
     /**

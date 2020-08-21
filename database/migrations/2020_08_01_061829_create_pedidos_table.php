@@ -20,6 +20,7 @@ class CreatePedidosTable extends Migration
             $table->foreign('usuario_id')->references('id')->on('usuarios');
             $table->foreignId('tipo_id');
             $table->foreign('tipo_id')->references('id')->on('tipos_pedido');
+            $table->string('direccion');
             $table->timestamps();
         });
     }

@@ -1,25 +1,12 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Montero</title>
-
+@extends("$layout.layout")
+@section('titulo')
+@section('contenido')
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         <!-- Styles -->
         <style>
-            html, body {
-                background-color: #04323F;
-                color: #D45812;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 500;
-                height: 100vh;
-                margin: 0;
-            }
-
+           
             .full-height {
                 height: 100vh;
             }
@@ -42,6 +29,12 @@
 
             .content {
                 text-align: center;
+                 background-color: #04323F;
+                color: #D45812;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 500;
+                height: 100vh;
+                margin: 0;
             }
 
             .title {
@@ -62,39 +55,41 @@
                 margin-bottom: 30px;
             }
         </style>
-    </head>
-    <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
             <div class="content">
                 <div class="title m-b-md">
-                   Montero
+                  <img class="logoLogin" src="{{asset("$layout/dist/img/Logo_montero.png")}}" style="width: 400px; height: auto; border-radius: 20px">
                 </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Compras</a>
-                    <a href="https://laracasts.com">Ventas</a>
-                    <a href="https://laravel-snews.com">Lista de Precios</a>
-                    <a href="{{route('pedidos')}}">Pedidos</a>
-                    <a href="https://nova.laravel.com">Pagos</a>
-                    <a href="https://forge.laravel.com">Averias</a>
-                    <a href="https://vapor.laravel.com">Envios</a>
-                    <a href="{{route('inventario')}}">Inventario</a>
+        <div class="login-box-body">
+            <p class="login-box-msg">Inicio su sesion</p>
+            @if ($errors->any())
+                <div class="alert alert-danger alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    <div class="alert-text">
+                        @foreach ($errors->all() as $error)
+                            <span>{{ $error }}</span>
+                        @endforeach
+                    </div>
                 </div>
-            </div>
+            @endif
+            <form action="{{route('login_post')}}" method="POST" autocomplete="off">
+                @csrf
+                <div class="form-group has-feedback">
+                    <input type="text" name="user" class="form-control" value="{{old('user')}}" placeholder="C.c">
+                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="password" name="password" class="form-control" placeholder="Contraseña">
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
+                <div class="row">
+                    <div class="col-xs-8"></div>
+                        <button type="submit" class="btn btn-primary btn-block btn-flat">Login</button>
+                </div>
+            </form>
         </div>
-    </body>
-</html>
+    </div>
+            </div>
+        
+
+@endsection
