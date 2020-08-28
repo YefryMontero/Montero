@@ -1,8 +1,17 @@
+<style>
+    .sidebarMontero {
+                 background-color: #003B69;
+            }
+  
+</style>
+
+
 <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-light-navy elevation-4">
     <!-- Brand Logo -->
-    <a href="/" class="brand-link navbar-navy">
-      <img src="{{asset("$layout/dist/img/Logo_montero.png")}}" style="width: 100px; height: auto; border-radius: 15px; position: absolute; top: 10px; left: 70px; " >
+    <a href="/" class="brand-link sidebarMontero">
+      <img src="{{asset("$layout/dist/img/logoTomateMontero.png")}}" style="width: auto; height: 55px; border-radius: 15px; position: absolute; top: 1px; left: 10px; " >
+       <img src="{{asset("$layout/dist/img/logoLetrasMonteroMejoresFrutos.png")}}" style="width: 160px; height: auto; border-radius: 15px; position: absolute; top: 5px; left: 85px; " >
       <span class="brand-text font-weight-light">.</span>
     </a>
 

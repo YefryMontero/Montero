@@ -1,30 +1,77 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Productora Montero | Login</title>
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <!-- Bootstrap 3.3.7 -->
-    <link rel="stylesheet" href="{{asset("assets/$theme/bower_components/bootstrap/dist/css/bootstrap.min.css")}}">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{asset("assets/$theme/bower_components/font-awesome/css/font-awesome.min.css")}}">
-    <!-- Ionicons -->
-    <link rel="stylesheet" href="{{asset("assets/$theme/bower_components/Ionicons/css/ionicons.min.css")}}">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="{{asset("assets/$theme/dist/css/AdminLTE.min.css")}}">
+@extends("$layout.layout")
+@section('titulo')
+@section('contenido')
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-</head>
+        <!-- Styles -->
+        <style>
+           
+            .full-height {
+                height: 100vh;
+            }
 
-<body class="hold-transition login-page">
-    <div class="login-box">
-        <div class="login-logo">
-            <a href="#">Montero </a>
-        </div>
-        <div class="login-box-body">
-            <p class="login-box-msg">Inicio su sesion</p>
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .top-right {
+                position: absolute;
+                right: 10px;
+                top: 18px;
+            }
+
+            .content {
+                text-align: center;
+                background-color: #003B69;
+                color: #D45812;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 500;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .title {
+                font-size: 100px;
+            }
+
+            .links > a {
+                color: #fff;
+                padding: 0 25px;
+                font-size: 15px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
+            .m-b-md {
+                margin-bottom: 30px;
+            }
+
+            .label{
+                font-size: 30px;
+                margin-bottom: 30px;
+            }
+            .input{
+                background-color: #04323F;
+                border-color: #D45812;
+            }
+        </style>
+        <div class="flex-center position-ref full-height">
+            <div class="content">
+                <div class="title m-b-md">
+                    <img class="logoLogin" src="{{asset("$layout/dist/img/logoMontero.png")}}" style="width: 450px; height: auto; border-radius: 20px">
+                 </div>
+
+        <div class="card-body">
+            <label> Inicie su sesion</label>
             @if ($errors->any())
                 <div class="alert alert-danger alert-dismissible">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
@@ -37,12 +84,13 @@
             @endif
             <form action="{{route('login_post')}}" method="POST" autocomplete="off">
                 @csrf
-                <div class="form-group has-feedback">
-                    <input type="text" name="user" class="form-control" value="{{old('user')}}" placeholder="C.c">
+                <div class="form-group">
+                   
+                     <input  type="text" name="user" class="form-control input" value="{{old('user')}}" placeholder="C.c">
                     <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                 </div>
-                <div class="form-group has-feedback">
-                    <input type="password" name="password" class="form-control" placeholder="Contraseña">
+                <div class="form-group">
+                  <input type="password" name="password" class="form-control input" placeholder="Contraseña">
                     <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                 </div>
                 <div class="row">
@@ -52,9 +100,7 @@
             </form>
         </div>
     </div>
+            </div>
+        
 
-    <script src="{{asset("assets/$theme/bower_components/jquery/dist/jquery.min.js")}}"></script>
-    <script src="{{asset("assets/$theme/bower_components/bootstrap/dist/js/bootstrap.min.js")}}"></script>
-</body>
-
-</html>
+@endsection

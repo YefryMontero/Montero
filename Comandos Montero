@@ -1,0 +1,93 @@
+php artisan make:migration create_proveedores_table
+php artisan make:migration create_clientes_table
+php artisan make:migration create_usuarios_table
+
+
+
+php artisan make:migration create_password_resets_table
+php artisan make:migration create_roles_table
+php artisan make:migration create_permisos_table
+php artisan make:migration create_menus_table
+
+php artisan make:migration create_productos_table
+php artisan make:migration create_categorias_table
+php artisan make:migration create_pesos_table
+php artisan make:migration create_unidades_medida_table
+
+php artisan make:migration create_tipos_pedido_table
+php artisan make:migration create_pedidos_table
+php artisan make:migration create_linea_pedido_table
+
+php artisan make:migration create_tipos_factura_table
+php artisan make:migration create_factura_table
+php artisan make:migration create_linea_factura_table
+
+php artisan make:migration create_facturas_pedido_table
+
+php artisan make:migration create_tipos_pago_table
+php artisan make:migration create_pagos_table
+php artisan make:migration create_usuarios_rol_table
+php artisan make:migration create_historial_cambios_table
+php artisan make:migration create_menus_rol_tablee
+php artisan make:migration create_permiso_rol_table
+php artisan make:migration create_inventario_table
+php artisan make:migration create_orden_compra_table
+php artisan make:migration create_factura_venta_table
+php artisan make:migration create_factura_compra_table
+php artisan make:migration create_pago_factura_compra_table
+php artisan make:migration create_pago_factura_venta_table
+
+
+php artisan make:seeder ClientesSeeder
+php artisan make:seeder ProveedoresSeeder
+php artisan make:seeder ProductosSeeder
+php artisan make:seeder CategoriasSeder
+php artisan make:seeder PesosSeeder
+php artisan make:seeder UnidadesMedidaSeeder
+php artisan make:seeder TiposPedidoSeeder
+php artisan make:seeder PedidosSeeder
+php artisan make:seeder LineasPedidoSeeder
+php artisan make:seeder TiposFacturaSeeder
+php artisan make:seeder FacturasSeeder
+php artisan make:seeder LineasFacturaSeeder
+php artisan make:seeder TiposPagoSeeder
+php artisan make:seeder PagosSeeder
+php artisan make:seeder InventarioSeeder
+
+
+php artisan make:controller Producto/PesoController -r
+php artisan make:controller Producto/HistorialPrecioController -r
+php artisan make:controller Producto/FamiliaController -r
+php artisan make:controller Producto/UnidadMedidaController -r
+
+php artisan make:controller InventarioController -r
+php artisan make:controller ClienteController -r
+php artisan make:controller ProveedorController -r
+php artisan make:controller PedidoController -r
+php artisan make:controller EnvioController -r
+php artisan make:controller FacturaController -r
+php artisan make:controller PagoController -r
+php artisan make:controller GYPController -r
+
+
+php artisan make:Model Models/Productos/Producto
+php artisan make:Model Models/Productos/Categoria
+php artisan make:Model Models/Productos/Peso
+php artisan make:Model Models/Productos/UnidadMedida
+php artisan make:Model Models/Inventario
+
+
+php artisan make:model Models/Pedidos/Pedido
+php artisan make:model Models/Pedidos/PedidoCliente
+php artisan make:model Models/Pedidos/PedidoProveedor
+php artisan make:model Models/Pedidos/LineaPedido
+php artisan make:model Models/Pedidos/TipoPedido
+
+php artisan make:model Models/Facturas/Factura
+php artisan make:model Models/Facturas/FacturaCliente
+php artisan make:model Models/Facturas/FacturaProveedor
+php artisan make:model Models/Facturas/LineaFactura
+php artisan make:model Models/Facturas/TipoFactura
+
+php artisan make:model Models/Admin/Proveedor
+php artisan make:model Models/Admin/Cliente

@@ -15,8 +15,14 @@ use Illuminate\Support\Facades\Hash;
 class Usuario extends Authenticatable
 {
     protected $remember_token = false;
-    protected $table = 'usuario';
+    protected $table = 'usuarios';
     protected $fillable = ['user', 'phone', 'email', 'password'];
+
+     public function roles()
+    {
+        return $this->belongsToMany(Rol::class, 'usuario_rol');
+    }    
+
 
     public function setPasswordAttribute($pass)
     {

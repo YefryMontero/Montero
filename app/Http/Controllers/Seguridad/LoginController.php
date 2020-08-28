@@ -18,9 +18,8 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    public function index()
-    {
-        return view('seguridad.index');
+    public function index(){
+        return view('auth.login');
     }
 
     protected function authenticated(Request $request, $user)
@@ -36,6 +35,6 @@ class LoginController extends Controller
     }
     public function username()
     {
-        return 'usuario';
+        return 'user';
     }
 }
